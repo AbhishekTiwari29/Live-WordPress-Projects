@@ -1,0 +1,557 @@
+.wp-block-kubio-navigation-section__nav {
+    position: fixed;
+    top: 5;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+  /* Menu spacing adjust */
+  .wp-block-kubio-navigation {
+    gap: 10px !important;
+  }
+
+  /* Container padding kam karo */
+  .wp-block-kubio-navigation-section_nav > div {
+    padding: 8px 10px !important;
+  }
+
+  /* Agar menu wrap ho raha hai to fix */
+  .wp-block-kubio-navigation {
+    flex-wrap: nowrap;
+  }
+
+#kubio .style-OcIljpMOK-outer a.style-OcIljpMOK-link{ background: linear-gradient(135deg, #ff7a18, #ffb347);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);}
+
+#kubio .style-OcIljpMOK-outer a.style-OcIljpMOK-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+#kubio .style-OcIljpMOK-outer a.style-OcIljpMOK-link:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+
+#kubio .style-0xSC3AT64-text{ font-weight: 700;
+  color: #28A745;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;}
+
+
+#kubio .style-0xSC3AT64-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-25deg);
+}
+
+#kubio .style-0xSC3AT64-text:hover::before {
+  left: 125%;
+  transition: 0.8s;
+}
+
+/* PARENT */
+#kubio .style-J6FPNZyUrn-outer {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌑 PERMANENT DARK OVERLAY (fix visibility) */
+#kubio .style-J6FPNZyUrn-outer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* adjust 0.5 - 0.75 */
+  z-index: 1;
+}
+
+/* 🌟 LIGHT SWEEP ANIMATION */
+#kubio .style-J6FPNZyUrn-outer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  animation: sweep 7s linear infinite;
+}
+
+/* TEXT ABOVE ALL */
+#kubio .style-J6FPNZyUrn-outer * {
+  position: relative;
+  z-index: 3;
+}
+
+/* 🎬 ANIMATION */
+@keyframes sweep {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+
+/* menu */
+
+/* MAIN MENU */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul {
+  display: flex;
+  gap: 30px;
+}
+
+/* MENU ITEMS */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul li {
+  position: relative;
+}
+
+/* LINKS */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+/* ✨ HOVER TEXT EFFECT */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul li a:hover {
+  color: #00a6b0;
+}
+
+/* 🔥 ANIMATED UNDERLINE */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #00a6b0, #f26522);
+  transition: width 0.4s ease;
+}
+
+/* SHOW UNDERLINE ON HOVER */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul li:hover::after {
+  width: 100%;
+}
+
+/* 💎 SOFT GLOW ON HOVER */
+#kubio .style-ggfvqmDVzoF-outer > .kubio-menu > ul li:hover a {
+  text-shadow: 0 0 8px rgba(0, 166, 176, 0.5);
+}
+
+/* for text */
+/* TARGET H1 */
+[data-kubio] h1, 
+.with-kubio-global-style h1, 
+h1[data-kubio], 
+.wp-block-woocommerce-mini-cart-contents h1 {
+  
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
+  
+  /* ✨ Smooth entry animation */
+  animation: textReveal 1.2s ease-out both;
+
+  /* 💎 Better readability on mobile */
+  text-shadow: 
+    0 2px 10px rgba(0,0,0,0.6),
+    0 0 20px rgba(0,0,0,0.4);
+
+  letter-spacing: 0.5px;
+}
+
+/* 🔥 SOFT UNDERLINE GLOW (premium touch) */
+[data-kubio] h1::after,
+.with-kubio-global-style h1::after,
+h1[data-kubio]::after,
+.wp-block-woocommerce-mini-cart-contents h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 60%;
+  height: 2px;
+
+  background: linear-gradient(90deg, transparent, #00a6b0, transparent);
+  transform: translateX(-50%);
+  opacity: 0.6;
+
+  animation: underlineGlow 3s ease-in-out infinite;
+}
+
+/* 🎬 ANIMATIONS */
+
+/* Text reveal (no size change) */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Underline glow */
+@keyframes underlineGlow {
+  0%, 100% {
+    opacity: 0.3;
+    width: 40%;
+  }
+  50% {
+    opacity: 0.8;
+    width: 70%;
+  }
+}
+
+
+
+/* text*/
+
+/* LEAD TEXT */
+[data-kubio] .h-lead, 
+.with-kubio-global-style .h-lead, 
+.h-lead[data-kubio] {
+
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5568; /* soft dark grey */
+
+  max-width: 600px; /* better readability */
+  margin-top: 15px;
+
+  /* ✨ smooth appearance */
+  animation: fadeText 1.5s ease-out;
+
+  /* 💎 subtle depth */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+
+  letter-spacing: 0.3px;
+}
+
+/* 🎬 FADE ANIMATION */
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* form */
+
+
+/* 🔹 FORM CONTAINER (clean card look) */
+.wp-block-kubio-contact__formContainer.kubio-use-style {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* 🔹 LABEL (minimal + professional) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 6px;
+  display: block;
+  letter-spacing: 0.4px;
+}
+
+/* 🔹 INPUT / TEXTAREA (clean fields) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 input,
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 textarea {
+
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+
+  font-size: 14px;
+  color: #2d3748;
+
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+/* ✨ HOVER (very subtle) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 input:hover,
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 textarea:hover {
+  border-color: #cbd5e0;
+}
+
+/* 🔥 FOCUS (premium highlight) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 input:focus,
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 textarea:focus {
+
+  background: #ffffff;
+  border-color: #00a6b0;
+
+  box-shadow: 0 0 0 2px rgba(0,166,176,0.12);
+}
+
+/* 🔹 PLACEHOLDER (soft tone) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 input::placeholder,
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* 🔘 BUTTON (premium minimal style) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 input[type="submit"] {
+
+  width: 100%;
+  margin-top: 10px;
+
+  background: #00a6b0;
+  color: #fff;
+
+  border: none;
+  padding: 13px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 BUTTON HOVER (elegant, not flashy) */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 input[type="submit"]:hover {
+  background: #008c95;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,166,176,0.25);
+}
+
+/* 🧊 INPUT SPACING */
+.wp-block-kubio-contact__formContainer.kubio-use-style .wpcf7 p {
+  margin-bottom: 18px;
+}
+
+
+/* subascribe button  */
+
+/* 🔘 MAIN BUTTON */
+#kubio .style-cc8OtiLAVG-outer a.style-cc8OtiLAVG-link {
+
+  display: inline-block;
+  padding: 12px 26px;
+
+  background: linear-gradient(120deg, #00a6b0, #6366f1, #00a6b0);
+  background-size: 200% auto;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ✨ HOVER EFFECT (clean lift) */
+#kubio .style-cc8OtiLAVG-outer a.style-cc8OtiLAVG-link:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.35);
+}
+
+/* 🔥 CLICK */
+#kubio .style-cc8OtiLAVG-outer a.style-cc8OtiLAVG-link:active {
+  transform: scale(0.98);
+}
+
+/* 🎬 GRADIENT ANIMATION */
+@keyframes gradientShift {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+
+/* 🔘 MAIN BUTTON */
+#kubio .style-Dud6AOZG0Hca-outer a.style-Dud6AOZG0Hca-link {
+
+  display: inline-block;
+  padding: 12px 24px;
+
+  background: linear-gradient(120deg, #ff0000, #ff4d4d);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ HOVER (lift + glow) */
+#kubio .style-Dud6AOZG0Hca-outer a.style-Dud6AOZG0Hca-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,0,0,0.35);
+}
+
+/* 🔥 CLICK EFFECT */
+#kubio .style-Dud6AOZG0Hca-outer a.style-Dud6AOZG0Hca-link:active {
+  transform: scale(0.97);
+}
+
+/* 🌟 LIGHT SWEEP EFFECT */
+#kubio .style-Dud6AOZG0Hca-outer a.style-Dud6AOZG0Hca-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+}
+
+/* SWEEP ON HOVER */
+#kubio .style-Dud6AOZG0Hca-outer a.style-Dud6AOZG0Hca-link:hover::before {
+  animation: ytSweep 0.8s ease forwards;
+}
+
+/* 🎬 ANIMATION */
+@keyframes ytSweep {
+  0% { left: -120%; }
+  100% { left: 120%; }
+}
+
+/* 🔘 MAIN BUTTON */
+#kubio .style-4PzKBU0yKK-outer a.style-4PzKBU0yKK-link {
+
+  display: inline-block;
+  padding: 12px 24px;
+
+  background: linear-gradient(
+    120deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  background-size: 200% auto;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  animation: instaGradient 6s ease infinite;
+}
+
+/* ✨ HOVER EFFECT */
+#kubio .style-4PzKBU0yKK-outer a.style-4PzKBU0yKK-link:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(221,42,123,0.35);
+}
+
+/* 🔥 CLICK EFFECT */
+#kubio .style-4PzKBU0yKK-link:active {
+  transform: scale(0.97);
+}
+
+/* 🌈 GRADIENT ANIMATION */
+@keyframes instaGradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+
+/* 🔹 MAIN CONTAINER CENTER */
+#kubio .style-Ga0jqTuEz-outer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 🔹 INNER CONTENT ALIGN */
+#kubio .style-Ga0jqTuEz-outer [data-kubio] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 🔹 EACH BLOCK */
+#kubio .style-Ga0jqTuEz-outer [data-kubio] > * {
+  flex: 1 1 48%;
+}
+
+/* 🔹 FORM SIDE (CARD LOOK) */
+#kubio .style-Ga0jqTuEz-outer form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* 🔹 MOBILE FIX */
+@media (max-width: 768px) {
+  #kubio .style-Ga0jqTuEz-outer [data-kubio] > * {
+    flex: 1 1 100%;
+  }
+
+  #kubio .style-Ga0jqTuEz-outer {
+    text-align: center;
+  }
+}
